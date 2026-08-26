@@ -25,9 +25,18 @@
 
 .hero a { color: white; }
 
-.hero .button {
+.hero a.button.primary {
   background: white;
   color: #c8112e;
+}
+
+.hero p:not(.button-wrapper) > a {
+  display: inline-flex;
+  border: 1px solid #fff;
+  border-radius: 22px;
+  padding: 9px 20px;
+  color: #fff;
+  font-weight: 700;
 }
 
 .hero small {

@@ -21,7 +21,7 @@
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --heading-font-family: roboto, roboto-fallback, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 16px;
@@ -56,17 +56,17 @@
 @media (width >= 900px) {
   :root {
     /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
+    --body-font-size-m: 16px;
+    --body-font-size-s: 15px;
+    --body-font-size-xs: 13px;
 
     /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
-    --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
-    --heading-font-size-xs: 18px;
+    --heading-font-size-xxl: 44px;
+    --heading-font-size-xl: 34px;
+    --heading-font-size-l: 22px;
+    --heading-font-size-m: 20px;
+    --heading-font-size-s: 18px;
+    --heading-font-size-xs: 16px;
   }
 }
 
@@ -104,10 +104,10 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0.8em;
+  margin-top: 0;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.25;
   scroll-margin: 40px;
 }
@@ -142,19 +142,16 @@ pre {
   white-space: pre;
 }
 
+/* A section is full-width; its direct wrapper is the centered content rail.
+   Keeping these two responsibilities separate prevents EDS sections from
+   inheriting a fixed content width and becoming pinned to the left edge. */
 main > div {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 36px 20px;
-}
-
-main > .hero-container {
   max-width: none;
+  margin: 0;
   padding: 0;
 }
 
 main > .section.light-blue {
-  max-width: none;
   background: #e9f5fa;
 }
 
@@ -309,18 +306,39 @@ main img {
 
 /* sections */
 main > .section {
-  margin: 40px 0;
+  max-width: none;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 48px 24px;
 }
+
+main > .hero-container {
+  padding: 0;
+}
+
+.legal-details > div { padding: 0 18px 18px; }
 
 main > .section > div {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 24px;
-}
-
-main > .section.light-blue > div:not(.section-metadata) {
   max-width: 1180px;
   margin: 0 auto;
+  padding: 0;
+}
+
+main > .hero-container > div {
+  max-width: none;
+  padding: 0;
+}
+
+.legal-details {
+  border-radius: 3px;
+  background: #e9f5fa;
+}
+
+.legal-details summary {
+  cursor: pointer;
+  padding: 18px;
+  color: #173f63;
+  font-weight: 700;
 }
 
 main > .section:first-of-type {
@@ -328,8 +346,8 @@ main > .section:first-of-type {
 }
 
 @media (width >= 900px) {
-  main > .section > div {
-    padding: 0 32px;
+  main > .section:not(.hero-container) {
+    padding: 56px 32px;
   }
 }
 

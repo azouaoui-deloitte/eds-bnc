@@ -55,6 +55,25 @@ header nav p {
   line-height: 1;
 }
 
+header .nav-utility {
+  display: none;
+  background: #3f3f3f;
+  color: #fff;
+}
+
+header .nav-utility > div {
+  display: flex;
+  max-width: 1264px;
+  margin: auto;
+  gap: 24px;
+  padding: 9px 32px;
+}
+
+header .nav-utility a {
+  color: #fff;
+  font-size: 12px;
+}
+
 header nav a:any-link {
   color: currentcolor;
 }
@@ -281,4 +300,8 @@ header nav .nav-tools a {
   color: #fff;
   font-size: 13px;
   font-weight: 700;
+}
+
+@media (width >= 900px) {
+  header .nav-utility { display: block; }
 }
