@@ -25,3 +25,69 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+/* BNC mortgage hub variants; authored as a standard Cards block. */
+.cards-projects > ul,
+.cards-benefits > ul,
+.cards-contact > ul { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+
+.cards-projects > ul > li { border: 0; }
+
+.cards-projects .cards-card-body { margin: 14px 0; }
+
+.cards-rates > ul {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 8px;
+}
+
+.cards-rates > ul > li {
+  border: 0;
+  background: #fae7ed;
+  text-align: center;
+}
+
+.cards-rates .cards-card-body { margin: 16px; }
+
+.cards-rates h3 { color: #173f63; }
+
+.cards-contact > ul { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+
+.cards-contact > ul > li {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  align-items: start;
+}
+
+.cards-contact .cards-card-image { margin: 20px 0 0 16px; }
+
+.cards-contact .cards-card-image img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.cards-benefits > ul > li,
+.cards-calculators > ul > li {
+  border: 0;
+  background: transparent;
+  text-align: center;
+}
+
+.cards-benefits .cards-card-image img,
+.cards-calculators .cards-card-image img {
+  width: 148px;
+  height: 112px;
+  object-fit: contain;
+}
+
+.cards-links > ul {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0;
+}
+
+.cards-links > ul > li { border-color: #d9e0e5; }
+
+@media (width < 600px) {
+  .cards-contact > ul > li { grid-template-columns: 1fr; }
+  .cards-contact .cards-card-image { margin: 16px 16px 0; }
+}

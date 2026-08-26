@@ -12,32 +12,32 @@
 
 :root {
   /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  --background-color: #fff;
+  --light-color: #f4f7f8;
+  --dark-color: #173f63;
+  --text-color: #173f63;
+  --link-color: #006ac3;
+  --link-hover-color: #004e91;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
   --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
 
   /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
+  --body-font-size-m: 16px;
+  --body-font-size-s: 15px;
+  --body-font-size-xs: 13px;
 
   /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
+  --heading-font-size-xxl: 42px;
+  --heading-font-size-xl: 32px;
+  --heading-font-size-l: 24px;
+  --heading-font-size-m: 21px;
+  --heading-font-size-s: 18px;
+  --heading-font-size-xs: 16px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 72px;
 }
 
 /* fallback fonts */
@@ -77,7 +77,7 @@ body {
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
-  line-height: 1.6;
+  line-height: 1.45;
 }
 
 body.appear {
@@ -143,7 +143,19 @@ pre {
 }
 
 main > div {
-  margin: 40px 16px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 36px 20px;
+}
+
+main > .hero-container {
+  max-width: none;
+  padding: 0;
+}
+
+main > .section.light-blue {
+  max-width: none;
+  background: #e9f5fa;
 }
 
 input,
@@ -199,8 +211,8 @@ button.button:disabled {
 
 a.button.primary,
 button.button.primary {
-  border-color: var(--text-color);
-  background-color: var(--text-color);
+  border-color: #e31937;
+  background-color: #e31937;
   color: var(--background-color);
 }
 
@@ -304,6 +316,11 @@ main > .section > div {
   max-width: 1200px;
   margin: auto;
   padding: 0 24px;
+}
+
+main > .section.light-blue > div:not(.section-metadata) {
+  max-width: 1180px;
+  margin: 0 auto;
 }
 
 main > .section:first-of-type {
