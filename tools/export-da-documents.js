@@ -51,8 +51,11 @@ function convertBlock(block) {
 
 function absolutizeLocalImages(html, sourcePath) {
   const directory = dirname(sourcePath);
-  return html.replace(/\bsrc=(['"])\.\/images\/([^'"]+)\1/gi, (_match, quote, asset) => (
+  const absoluteImages = html.replace(/\bsrc=(['"])\.\/images\/([^'"]+)\1/gi, (_match, quote, asset) => (
     `src=${quote}${liveAssetBase}/${directory}/images/${asset}${quote}`
+  ));
+  return absoluteImages.replace(/<picture>\s*<img\s+src=(['"])(https:\/\/[^'"]+)\1([^>]*)>\s*<\/picture>/gi, (_match, quote, src, attributes) => (
+    `<picture><source srcset=${quote}${src}${quote}><source srcset=${quote}${src}${quote} media="(min-width: 600px)"><img src=${quote}${src}${quote}${attributes} loading="lazy"></picture>`
   ));
 }
 
