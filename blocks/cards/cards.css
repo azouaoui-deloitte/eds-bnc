@@ -203,6 +203,110 @@ main .section:has(.cards-contact) > div > h2 + p { text-align: center; }
   text-align: center;
 }
 
+
+/* stylelint-disable no-descending-specificity -- page-specific card variants */
+
+/* Insurance hub variants, authored with the standard Cards content model. */
+.cards-insurance-intro > ul {
+  grid-template-columns: 1fr 1fr minmax(270px, 0.9fr);
+  gap: 0;
+}
+
+.cards-insurance-intro > ul > li {
+  border: 0;
+  background: #edf7fc;
+}
+
+.cards-insurance-intro > ul > li + li { border-left: 1px solid #d9e7ee; }
+
+.cards-insurance-intro > ul > li:last-child { background: transparent; }
+
+.cards-insurance-intro h3,
+.cards-insurance-overview h3 { font-size: 19px; }
+
+.cards-insurance-intro .cards-card-body { margin: 24px; }
+
+.cards-insurance-intro .cards-card-body a,
+.cards-insurance-solutions .cards-card-body a { font-weight: 700; }
+
+.cards-insurance-overview > ul {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.cards-insurance-overview > ul > li {
+  border: 0;
+  background: #edf7fc;
+}
+
+.cards-insurance-overview .cards-card-body { margin: 24px; }
+
+.cards-insurance-overview ul { padding-left: 18px; }
+
+.cards-insurance-overview li::marker { color: #1e6270; }
+
+.cards-claims > ul {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.cards-claims > ul > li {
+  border: 0;
+  background: #f2f2f2;
+}
+
+.cards-claims .cards-card-image {
+  margin-top: 22px;
+  text-align: center;
+}
+
+.cards-claims .cards-card-image img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.cards-claims .cards-card-body {
+  margin: 16px 22px 28px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.cards-claims h3 { font-size: 19px; }
+
+.cards-claims h4 {
+  margin: 18px 0 6px;
+  color: #214b6a;
+  font-size: 15px;
+}
+
+.tip-insurance { margin: 0; }
+
+.cards-insurance-solutions > ul {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 36px 52px;
+}
+
+.cards-insurance-solutions > ul > li {
+  border: 0;
+}
+
+.cards-insurance-solutions .cards-card-body {
+  position: relative;
+  margin: 0;
+}
+
+.cards-insurance-solutions .promo {
+  display: inline-block;
+  margin: 0 0 8px;
+  border-radius: 12px;
+  padding: 3px 9px;
+  background: #ed1c24;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
 @media (width < 600px) {
   .cards-contact > ul > li { grid-template-columns: 1fr; }
   .cards-contact .cards-card-image { margin: 16px 16px 0; }
@@ -212,6 +316,18 @@ main .section:has(.cards-contact) > div > h2 + p { text-align: center; }
 
   .cards-contact > ul > li + li {
     border-top: 1px solid #d4dde1;
+    border-left: 0;
+  }
+
+  .cards-insurance-intro > ul,
+  .cards-insurance-overview > ul,
+  .cards-claims > ul,
+  .cards-insurance-solutions > ul {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-insurance-intro > ul > li + li {
+    border-top: 1px solid #d9e7ee;
     border-left: 0;
   }
 }
@@ -233,4 +349,9 @@ main .section:has(.cards-contact) > div > h2 + p { text-align: center; }
     width: 92px;
     height: 76px;
   }
+
+  .cards-insurance-intro > ul,
+  .cards-claims > ul { grid-template-columns: 1fr; }
 }
+
+/* stylelint-enable no-descending-specificity */
