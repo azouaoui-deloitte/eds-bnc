@@ -33,58 +33,58 @@
   }
 }
 
-main .columns-offer {
+main .columns:is(.columns-offer, .offer) {
   border-radius: 5px;
   background: #f0f1f2;
 }
 
-main .columns-offer > div { gap: 0; }
+main .columns:is(.columns-offer, .offer) > div { gap: 0; }
 
-main .columns-offer .columns-img-col { background: #ed1c24; }
+main .columns:is(.columns-offer, .offer) .columns-img-col { background: #ed1c24; }
 
-main .columns-offer .columns-img-col img {
+main .columns:is(.columns-offer, .offer) .columns-img-col img {
   height: 250px;
   object-fit: contain;
 }
 
-main .columns-preapproval {
+main .columns:is(.columns-preapproval, .preapproval) {
   border: 1px solid #d5dde1;
   border-radius: 4px;
 }
 
-main .columns-preapproval .columns-img-col {
+main .columns:is(.columns-preapproval, .preapproval) .columns-img-col {
   display: flex;
   align-items: center;
   justify-content: center;
   background: #fff;
 }
 
-main .columns-preapproval .columns-img-col img {
+main .columns:is(.columns-preapproval, .preapproval) .columns-img-col img {
   max-width: 260px;
   object-fit: contain;
 }
 
-main .columns-preapproval > div { gap: 0; }
+main .columns:is(.columns-preapproval, .preapproval) > div { gap: 0; }
 
-main .columns-preapproval > div > div:nth-child(2) { padding: 32px; }
+main .columns:is(.columns-preapproval, .preapproval) > div > div:nth-child(2) { padding: 32px; }
 
-main .columns-preapproval > div > div:nth-child(3) {
+main .columns:is(.columns-preapproval, .preapproval) > div > div:nth-child(3) {
   padding: 32px;
   background: #f0f1f2;
 }
 
-main .columns-preapproval ul {
+main .columns:is(.columns-preapproval, .preapproval) ul {
   margin: 0;
   padding-left: 22px;
   list-style: none;
 }
 
-main .columns-preapproval li {
+main .columns:is(.columns-preapproval, .preapproval) li {
   position: relative;
   margin-bottom: 12px;
 }
 
-main .columns-preapproval li::before {
+main .columns:is(.columns-preapproval, .preapproval) li::before {
   content: '✓';
   position: absolute;
   left: -22px;
@@ -93,12 +93,12 @@ main .columns-preapproval li::before {
   font-weight: 700;
 }
 
-main .columns-offer > div > div:last-child { padding: 36px; }
+main .columns:is(.columns-offer, .offer) > div > div:last-child { padding: 36px; }
 
-main .columns-offer h2 { color: #0c4568; }
+main .columns:is(.columns-offer, .offer) h2 { color: #0c4568; }
 
 @media (width >= 900px) {
-  main .columns-preapproval > div > div:first-child { flex: 0.8; }
-  main .columns-preapproval > div > div:nth-child(2) { flex: 1.2; }
-  main .columns-preapproval > div > div:nth-child(3) { flex: 1.5; }
+  main .columns:is(.columns-preapproval, .preapproval) > div > div:first-child { flex: 0.8; }
+  main .columns:is(.columns-preapproval, .preapproval) > div > div:nth-child(2) { flex: 1.2; }
+  main .columns:is(.columns-preapproval, .preapproval) > div > div:nth-child(3) { flex: 1.5; }
 }
