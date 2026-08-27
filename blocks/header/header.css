@@ -1,6 +1,7 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background-color: #fff;
+  border-bottom: 1px solid #d7e0e4;
   width: 100%;
   z-index: 2;
   position: fixed;
@@ -15,7 +16,7 @@ header nav {
   align-items: center;
   gap: 0 24px;
   margin: auto;
-  max-width: 1248px;
+  max-width: 1320px;
   height: var(--nav-height);
   padding: 0 24px;
   font-family: var(--body-font-family);
@@ -52,6 +53,25 @@ header nav[aria-expanded='true'] {
 header nav p {
   margin: 0;
   line-height: 1;
+}
+
+header .nav-utility {
+  display: none;
+  background: #3f3f3f;
+  color: #fff;
+}
+
+header .nav-utility > div {
+  display: flex;
+  max-width: 1264px;
+  margin: auto;
+  gap: 24px;
+  padding: 9px 32px;
+}
+
+header .nav-utility a {
+  color: #fff;
+  font-size: 12px;
 }
 
 header nav a:any-link {
@@ -142,14 +162,14 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
 /* brand */
 header .nav-brand {
   grid-area: brand;
-  flex-basis: 128px;
+  flex-basis: 155px;
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
 }
 
 header nav .nav-brand img {
-  width: 128px;
+  width: 155px;
   height: auto;
 }
 
@@ -174,7 +194,8 @@ header nav .nav-sections ul {
 }
 
 header nav .nav-sections ul > li {
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 header nav .nav-sections ul > li > ul {
@@ -269,4 +290,18 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+}
+
+header nav .nav-tools a {
+  display: inline-flex;
+  border-radius: 18px;
+  padding: 9px 14px;
+  background: #e31937;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+@media (width >= 900px) {
+  header .nav-utility { display: block; }
 }

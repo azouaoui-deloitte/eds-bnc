@@ -25,3 +25,333 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+/* BNC mortgage hub variants; authored as a standard Cards block. */
+.cards-projects > ul,
+.cards-benefits > ul,
+.cards-contact > ul { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+
+.cards-projects > ul > li { border: 0; }
+
+.cards-projects > ul > li img { aspect-ratio: 3 / 2; }
+
+.cards-projects .cards-card-body { margin: 14px 0; }
+
+.cards-projects h3 { font-weight: 400; }
+
+.cards-projects .cards-card-body > p:last-child a {
+  display: inline-flex;
+  border: 1px solid #718797;
+  border-radius: 20px;
+  padding: 7px 20px;
+  color: #36566c;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.cards-rates > ul {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 8px;
+}
+
+.cards-rates > ul > li {
+  border: 0;
+  background: #fae7ed;
+  text-align: center;
+}
+
+.cards-rates .cards-card-body { margin: 16px; }
+
+.cards-rates h3 { color: #173f63; }
+
+.rate-cta {
+  margin: 26px 0 0;
+  text-align: center;
+  font-size: 21px;
+}
+
+.rate-cta + .rate-cta { margin-top: 12px; }
+
+.rate-cta .button { font-size: 14px; }
+
+.cards-contact > ul {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  border: 1px solid #d4dde1;
+  border-radius: 4px;
+  gap: 0;
+}
+
+.cards-contact > ul > li {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  align-items: center;
+  border: 0;
+}
+
+.cards-contact .cards-card-image { margin: 20px 0 0 16px; }
+
+.cards-contact .cards-card-image img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.cards-benefits > ul > li,
+.cards-calculators > ul > li {
+  border: 0;
+  background: transparent;
+  text-align: center;
+}
+
+.cards-benefits .cards-card-image img,
+.cards-calculators .cards-card-image img {
+  width: 148px;
+  height: 112px;
+  object-fit: contain;
+}
+
+.cards-benefits h3,
+.cards-calculators h3 { font-size: 19px; }
+
+.cards-benefits .cards-card-body,
+.cards-calculators .cards-card-body { font-size: 15px; }
+
+.cards-links > ul {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+}
+
+.cards-links > ul > li {
+  position: relative;
+  border-color: #d9e0e5;
+}
+
+.cards-links h3 { font-size: 18px; }
+
+.cards-final-cta > ul { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+.cards-final-cta > ul > li { min-height: 280px; }
+
+.cards-final-cta .cards-card-body {
+  display: flex;
+  height: calc(100% - 32px);
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.cards-final-cta .cards-card-image {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.cards-final-cta .cards-card-image img {
+  width: 92px;
+  height: 92px;
+  object-fit: contain;
+}
+
+.cards-final-cta h3 { font-size: 22px; }
+
+main .section:has(.cards-contact) > div > h2,
+main .section:has(.cards-contact) > div > h2 + p { text-align: center; }
+
+.contact-phone { text-align: center; }
+
+.tip {
+  border-radius: 4px;
+  padding: 26px 36px;
+  background: #e1faf4;
+  color: #0d536a;
+}
+
+.tip strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.cards-links .promo {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  margin: 0;
+  transform: translateX(-50%);
+  border-radius: 0 0 12px 12px;
+  padding: 4px 10px;
+  background: #ed1c24;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.cards-articles > ul {
+  grid-template-columns: repeat(auto-fit, minmax(257px, 1fr));
+}
+
+.cards-articles > ul > li { border: 0; }
+
+.cards-articles .cards-card-body { margin: 14px 0; }
+
+.cards-articles h3 { font-size: 17px; }
+
+.cards-contact > ul > li + li { border-left: 1px solid #d4dde1; }
+
+.articles-cta {
+  margin-top: 22px;
+  text-align: center;
+}
+
+
+/* stylelint-disable no-descending-specificity -- page-specific card variants */
+
+/* Insurance hub variants, authored with the standard Cards content model. */
+.cards-insurance-intro > ul {
+  grid-template-columns: 1fr 1fr minmax(270px, 0.9fr);
+  gap: 0;
+}
+
+.cards-insurance-intro > ul > li {
+  border: 0;
+  background: #edf7fc;
+}
+
+.cards-insurance-intro > ul > li + li { border-left: 1px solid #d9e7ee; }
+
+.cards-insurance-intro > ul > li:last-child { background: transparent; }
+
+.cards-insurance-intro h3,
+.cards-insurance-overview h3 { font-size: 19px; }
+
+.cards-insurance-intro .cards-card-body { margin: 24px; }
+
+.cards-insurance-intro .cards-card-body a,
+.cards-insurance-solutions .cards-card-body a { font-weight: 700; }
+
+.cards-insurance-overview > ul {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.cards-insurance-overview > ul > li {
+  border: 0;
+  background: #edf7fc;
+}
+
+.cards-insurance-overview .cards-card-body { margin: 24px; }
+
+.cards-insurance-overview ul { padding-left: 18px; }
+
+.cards-insurance-overview li::marker { color: #1e6270; }
+
+.cards-claims > ul {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.cards-claims > ul > li {
+  border: 0;
+  background: #f2f2f2;
+}
+
+.cards-claims .cards-card-image {
+  margin-top: 22px;
+  text-align: center;
+}
+
+.cards-claims .cards-card-image img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.cards-claims .cards-card-body {
+  margin: 16px 22px 28px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.cards-claims h3 { font-size: 19px; }
+
+.cards-claims h4 {
+  margin: 18px 0 6px;
+  color: #214b6a;
+  font-size: 15px;
+}
+
+.tip-insurance { margin: 0; }
+
+.cards-insurance-solutions > ul {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 36px 52px;
+}
+
+.cards-insurance-solutions > ul > li {
+  border: 0;
+}
+
+.cards-insurance-solutions .cards-card-body {
+  position: relative;
+  margin: 0;
+}
+
+.cards-insurance-solutions .promo {
+  display: inline-block;
+  margin: 0 0 8px;
+  border-radius: 12px;
+  padding: 3px 9px;
+  background: #ed1c24;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+@media (width < 600px) {
+  .cards-contact > ul > li { grid-template-columns: 1fr; }
+  .cards-contact .cards-card-image { margin: 16px 16px 0; }
+
+  .cards-links > ul,
+  .cards-final-cta > ul { grid-template-columns: 1fr; }
+
+  .cards-contact > ul > li + li {
+    border-top: 1px solid #d4dde1;
+    border-left: 0;
+  }
+
+  .cards-insurance-intro > ul,
+  .cards-insurance-overview > ul,
+  .cards-claims > ul,
+  .cards-insurance-solutions > ul {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-insurance-intro > ul > li + li {
+    border-top: 1px solid #d9e7ee;
+    border-left: 0;
+  }
+}
+
+@media (600px <= width < 900px) {
+  .cards-projects > ul,
+  .cards-rates > ul,
+  .cards-articles > ul,
+  .cards-final-cta > ul { grid-template-columns: 1fr; }
+
+  .cards-projects > ul > li img { aspect-ratio: 3 / 2; }
+
+  .cards-benefits > ul { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+  .cards-calculators > ul { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+  .cards-calculators .cards-card-image img,
+  .cards-benefits .cards-card-image img {
+    width: 92px;
+    height: 76px;
+  }
+
+  .cards-insurance-intro > ul,
+  .cards-claims > ul { grid-template-columns: 1fr; }
+}
+
+/* stylelint-enable no-descending-specificity */

@@ -5,33 +5,135 @@
 
 .hero {
   position: relative;
-  padding: 40px 24px;
+  display: grid;
+  align-items: center;
+  padding: 0 24px;
   min-height: 300px;
+  background: #ed1c24;
+  color: white;
 }
 
-.hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+.hero > div { display: contents; }
+
+.hero > div > div:first-child {
+  z-index: 1;
+  max-width: 530px;
+  padding: 36px 0;
 }
 
-.hero picture {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+.hero p { margin: 8px 0; }
+
+.hero a { color: white; }
+
+.hero a.button.primary {
+  background: white;
+  color: #c8112e;
 }
 
-.hero img {
-  object-fit: cover;
+.hero p:not(.button-wrapper) > a {
+  display: inline-flex;
+  border: 1px solid #fff;
+  border-radius: 22px;
+  padding: 9px 20px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.hero small {
+  display: block;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.hero h1,
+.hero h1 + p { color: var(--background-color); }
+
+.hero > div > div:last-child { align-self: stretch; }
+
+.hero > div > div:last-child picture {
+  display: block;
+  height: 100%;
+}
+
+.hero > div > div:last-child img {
   width: 100%;
   height: 100%;
+  min-height: 220px;
+  object-fit: contain;
+  object-position: center bottom;
 }
 
 @media (width >= 900px) {
   .hero {
-    padding: 40px 32px;
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 44%);
+    padding: 0 max(32px, calc((100vw - 1180px) / 2));
+  }
+
+  .hero > div > div:last-child img { min-height: 300px; }
+
+  .hero h1 { margin-top: 0; }
+}
+
+@media (width < 899px) {
+  .hero > div > div:last-child { display: none; }
+}
+
+/* Insurance hub: image-led editorial banner rather than the mortgage promo. */
+.hero-insurances {
+  min-height: 375px;
+  background: #e8f9f9;
+  color: #214b6a;
+}
+
+.hero-insurances > div > div:first-child {
+  max-width: 1180px;
+  padding: 0;
+}
+
+.hero-insurances h1,
+.hero-insurances h1 + p {
+  color: #ed1c24;
+}
+
+.hero-insurances h1 + p { color: #214b6a; }
+
+.hero-insurances > div > div:last-child,
+.hero-insurances > div > div:last-child picture,
+.hero-insurances > div > div:last-child img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-insurances > div > div:last-child img {
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (width >= 900px) {
+  .hero-insurances { display: block; }
+
+  .hero-insurances > div > div:first-child {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    padding: 112px 32px;
+  }
+}
+
+@media (width < 899px) {
+  .hero-insurances {
+    min-height: 255px;
+    background: #e8f9f9;
+  }
+
+  .hero-insurances > div > div:last-child { display: block; }
+
+  .hero-insurances > div > div:first-child {
+    align-self: end;
+    padding: 142px 24px 24px;
+    background: linear-gradient(90deg, rgb(232 249 249 / 96%) 0%, rgb(232 249 249 / 72%) 65%, transparent 100%);
   }
 }

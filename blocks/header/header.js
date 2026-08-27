@@ -166,6 +166,17 @@ export default async function decorate(block) {
 
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
-  navWrapper.append(nav);
+  const utility = document.createElement('div');
+  utility.className = 'nav-utility';
+  utility.innerHTML = `
+    <div>
+      <a href="/particuliers/hypotheque">Particuliers</a>
+      <a href="https://www.bnc.ca/entreprises.html">Entreprises</a>
+      <a href="https://www.bnc.ca/gestion-patrimoine.html">Gestion de patrimoine</a>
+      <a href="https://www.bnc.ca/a-propos-de-nous.html">À propos de nous</a>
+      <a href="https://www.bnc.ca/particuliers/aide.html">Aide</a>
+      <a href="https://www.bnc.ca/particuliers/devenir-client.html">Devenir client</a>
+    </div>`;
+  navWrapper.append(utility, nav);
   block.append(navWrapper);
 }
