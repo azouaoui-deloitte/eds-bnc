@@ -1,3 +1,4 @@
+/* code-sync bootstrap: deploy current EDS asset set */
 /**
  * Applies authored section metadata to the parent section.
  * @param {Element} block The metadata table.

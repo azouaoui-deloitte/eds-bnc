@@ -1,3 +1,4 @@
+/* code-sync bootstrap: deploy current EDS asset set */
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {

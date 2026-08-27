@@ -1,3 +1,4 @@
+/* code-sync bootstrap: deploy current EDS asset set */
 let consentedLoaded = false;
 
 /**

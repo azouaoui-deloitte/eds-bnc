@@ -1,3 +1,4 @@
+/* code-sync bootstrap: deploy current EDS asset set */
 /*
  * Fragment Block
  * Include content on a page as a fragment.
